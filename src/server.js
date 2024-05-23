@@ -4,7 +4,6 @@ import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 
-const PORT = 4000;
 
 console.log(process.cwd());
 
@@ -19,6 +18,5 @@ app.use("/", globalRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
 
-const handleListening = () => console.log(`Server listening on port http://localhost:${PORT}🚀`);
+export default app;
 
-app.listen(PORT, handleListening);
